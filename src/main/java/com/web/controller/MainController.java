@@ -4,17 +4,32 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
+/** 
+* @packageName : com.web.controller 
+* @fileName : MainController.java 
+* @author : WooSin Kim
+* @date : 2020.12.01 
+* @description : 
+* =========================================================== 
+* DATE					AUTHOR					NOTE 
+* ----------------------------------------------------------- 
+* 2020.12.01			WooSin Kim				최초 생성 
+*/
 @Controller 
 public class MainController {
 
-	/**
-	 * 메인 페이지
-	 * @param modelMap
-	 * @return
-	 */
+    /** 
+    * 메인 페이지
+    * @methodName : main 
+    * @author : WooSin Kim
+    * @date : 2020.12.01 
+    * @param modelMap
+    * @return 
+    */
     @RequestMapping(value = "/")
     public String main(ModelMap modelMap) {
-        return "main/main";
+        return "fo/index/index";
     }
     
    
