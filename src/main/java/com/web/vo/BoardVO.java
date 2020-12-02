@@ -6,6 +6,17 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.web.common.utiletc;
 
+/** 게시판 VO
+* @packageName : com.web.vo 
+* @fileName : BoardVO.java 
+* @author : WooSin Kim
+* @date : 2020.12.02 
+* @description : 
+* =========================================================== 
+* DATE					AUTHOR					NOTE 
+* ----------------------------------------------------------- 
+* 2020.12.02			WooSin Kim				최초 생성 
+*/
 public class BoardVO {
 
     private String bgno;

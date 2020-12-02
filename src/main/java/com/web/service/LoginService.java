@@ -1,7 +1,5 @@
 package com.web.service;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
@@ -10,13 +8,12 @@ import org.springframework.transaction.TransactionDefinition;
 import org.springframework.transaction.TransactionException;
 import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
-import org.springframework.util.StringUtils;
 
-import com.web.vo.EnquiryVO;
+import com.web.vo.UserVO;
 
 /** 
 * @packageName : com.web.service 
-* @fileName : EnquiryService.java 
+* @fileName : LoginService.java 
 * @author : WooSin Kim
 * @date : 2020.12.02 
 * @description : 
@@ -26,7 +23,7 @@ import com.web.vo.EnquiryVO;
 * 2020.12.02			WooSin Kim				최초 생성 
 */
 @Service
-public class EnquiryService {
+public class LoginService {
 
 	@Autowired
 	private SqlSessionTemplate sqlSession;
@@ -34,33 +31,34 @@ public class EnquiryService {
 	@Autowired
     private DataSourceTransactionManager txManager;
 	
-	private Logger logger = LogManager.getLogger(EnquiryService.class);
 
 	/** 
-	* 문의 저장
-	* @methodName : insertEnquiry 
+	* 로그인 체크
+	* @methodName : checkUser 
 	* @author : WooSin Kim
 	* @date : 2020.12.02 
-	* @param enquiryVO 
+	* @param userVO 
 	*/
-	public void insertEnquiry(EnquiryVO enquiryVO) {
+	public Boolean checkUser(UserVO userVO) {
 		DefaultTransactionDefinition def = new DefaultTransactionDefinition();
 		def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
 		TransactionStatus status = txManager.getTransaction(def);
 		
 		try {
-			if (StringUtils.isEmpty(enquiryVO.getCreatdDate())) {
-				sqlSession.insert("insertEnquiry", enquiryVO);
-				
-				txManager.commit(status);
-			} else {
-				sqlSession.update("updateEnquiry", enquiryVO);
+			//해당 로그인 정보를 가진 유저가 있는지 확인
+			int userCheck = sqlSession.selectOne("selectOneUser", userVO);
+						
+			if(userCheck > 0) {
+				//해당 유저 있음
+				return true;
+			}else {
+				//해당 유저 없음
+				return false;
 			}
 			
 		} catch (TransactionException ex) {
-			txManager.rollback(status);
+			return false;
 		}
 		
 	}
-	
 }

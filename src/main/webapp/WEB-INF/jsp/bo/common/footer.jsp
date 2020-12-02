@@ -9,12 +9,12 @@
 <!-- Bootstrap 4 -->
 <script src="/resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
-<script src="/resources/plugins/chart.js/Chart.min.js"></script>
+<!-- <script src="/resources/plugins/chart.js/Chart.min.js"></script> -->
 <!-- Sparkline -->
 <script src="/resources/plugins/sparklines/sparkline.js"></script>
 <!-- JQVMap -->
-<script src="/resources/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="/resources/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- <script src="/resources/plugins/jqvmap/jquery.vmap.min.js"></script> -->
+<!-- <script src="/resources/plugins/jqvmap/maps/jquery.vmap.usa.js"></script> -->
 <!-- jQuery Knob Chart -->
 <script src="/resources/plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
@@ -31,9 +31,12 @@
 <!-- AdminLTE for demo purposes -->
 <script src="/resources/dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/resources/dist/js/pages/dashboard.js"></script>
+<!-- <script src="/resources/dist/js/pages/dashboard.js"></script> -->
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/resources/dist/js/pages/dashboard3.js"></script>
+<!-- <script src="/resources/dist/js/pages/dashboard3.js"></script> -->
 <!-- AdminLTE App -->
 <script src="/resources/dist/js/adminlte.min.js"></script>
 
+<script src="/resources/plugins/toastr/toastr.min.js"></script>
+
+<script src="/resources/plugins/jquery-validation/jquery.validate.min.js"></script>

@@ -14,7 +14,7 @@ function enquiryForm_submit(this_form, data) {
     $.ajax({
       type: "POST",
       url: "/insertEnquiry",
-      data: data,
+      data: data
     }).done( function(data){
     	
       if (data == 'SUCCESS') {

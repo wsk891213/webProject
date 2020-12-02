@@ -2,11 +2,17 @@ package com.web.vo;
 
 import java.time.LocalDateTime;
 
-/**
- * 문의VO
- * @author user
- *
- */
+/** 문의 VO
+* @packageName : com.web.vo 
+* @fileName : EnquiryVO.java 
+* @author : WooSin Kim
+* @date : 2020.12.02 
+* @description : 
+* =========================================================== 
+* DATE					AUTHOR					NOTE 
+* ----------------------------------------------------------- 
+* 2020.12.02			WooSin Kim				최초 생성 
+*/
 public class EnquiryVO {
 
     private int enquirySeq;
