@@ -34,4 +34,6 @@
 <script src="/resources/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="/resources/dist/js/pages/dashboard3.js"></script>
+<!-- AdminLTE App -->
+<script src="/resources/dist/js/adminlte.min.js"></script>
 

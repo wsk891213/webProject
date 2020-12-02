@@ -2,7 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<%@ include file="../common/header.jsp" %>
+<%@ include file="/WEB-INF/jsp/bo/common/header.jsp" %>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
@@ -34,7 +34,7 @@
   </nav>
 
 <!-- Main Sidebar Container -->
-<%@ include file="../common/sideBar.jsp" %>
+<%@ include file="/WEB-INF/jsp/bo/common/sideBar.jsp" %>
 
 
   <!-- Content Wrapper. Contains page content -->
@@ -193,7 +193,7 @@
 		  
 </div>
 	
-<%@ include file="../common/footer.jsp" %>
+<%@ include file="/WEB-INF/jsp/bo/common/footer.jsp" %>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
-<%@ include file="../common/header.jsp" %>
+<%@ include file="/WEB-INF/jsp/fo/common/header.jsp" %>
 <script type="text/javascript"> 
 $(function(){
 	
@@ -29,7 +29,7 @@ function enquiryForm_submit(this_form, data) {
 }
 </script>
 <body>
-<%@ include file="../common/gnb.jsp" %>
+<%@ include file="/WEB-INF/jsp/fo/common/gnb.jsp" %>
  
 
   <!-- ======= Hero Section ======= -->
@@ -512,7 +512,7 @@ function enquiryForm_submit(this_form, data) {
     </div>
   </footer><!-- End Footer -->
 
-	<%@ include file="../common/footer.jsp" %>
+	<%@ include file="/WEB-INF/jsp/fo/common/footer.jsp" %>
 </body>
 
 </html>
