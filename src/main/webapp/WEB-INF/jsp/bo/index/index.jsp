@@ -36,7 +36,6 @@
 <!-- Main Sidebar Container -->
 <%@ include file="/WEB-INF/jsp/bo/common/sideBar.jsp" %>
 
-
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
