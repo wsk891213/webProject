@@ -8,6 +8,12 @@
           FROM USER
          WHERE ID = #{id} 
            AND PASSWORD = #{password} 
+    </select>
+    
+    <select id="checkIDifExist" resultType="Integer" parameterType="com.web.vo.UserVO">
+        SELECT COUNT(*)
+          FROM USER
+         WHERE ID = #{id} 
     </select> 
          
 </mapper>

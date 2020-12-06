@@ -61,4 +61,28 @@ public class LoginService {
 		}
 		
 	}
+	
+	
+	public Boolean checkIDifExist(UserVO userVO) {
+		DefaultTransactionDefinition def = new DefaultTransactionDefinition();
+		def.setPropagationBehavior(TransactionDefinition.PROPAGATION_REQUIRED);
+		TransactionStatus status = txManager.getTransaction(def);
+		
+		try {
+			//해당 로그인 정보를 가진 유저가 있는지 확인
+			int userCheck = sqlSession.selectOne("checkIDifExist", userVO);
+						
+			if(userCheck > 0) {
+				//해당 유저 있음
+				return true;
+			}else {
+				//해당 유저 없음
+				return false;
+			}
+			
+		} catch (TransactionException ex) {
+			return false;
+		}
+		
+	}
 }
